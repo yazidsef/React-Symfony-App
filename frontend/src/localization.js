@@ -4,87 +4,87 @@ let strings = new LocalizedStrings({
     sr: {
         base: {
             profile: {
-                name: 'Ime',
-                surname: 'Prezime',
+                name: 'Nom',
+                surname: 'Prénom',
                 email: 'E-Mail',
-                username: 'Korisnicko ime',
-                password: 'Sifra',
-                role: 'Pozicija',
-                userType: 'Tip naloga'
+                username: 'Nom de l\'utilisateur',
+                password: 'Mot de passe',
+                role: 'Rôle',
+                userType: 'Type d\'utilisateur',
             },
             table: {
-                actions: 'Akcije',
-                edit: 'Uredi',
-                delete: 'Obrisi'
+                actions: 'Actions',
+                edit: 'modifier',
+                delete: 'supprimer',
             },
             filter: {
                 sort: {
-                    sortType: 'Nacin sortiranja',
-                    datetimeDesc: 'Od novijeg prema starijem',
-                    datetimeAsc: 'Od starijeg prema novijem',
+                    sortType: 'Type de tri',
+                    datetimeDesc: 'Du plus récent au plus ancien',
+                    datetimeAsc: 'Du plus ancien au plus récent',
                 }
             },
             role: {
-                user: 'Korisnik',
-                moderator: 'Moderator',
-                admin: 'Admin'
+                user: 'Utilisateur',
+                moderator: 'Modérateur',
+                admin: 'Administrateur'
             },
             userType: {
-                individual: 'Individual',
-                company: 'Company',
+                individual: 'Individuel',
+                company: 'Entreprise',
             }
         },
         forms: {
             common: {
-                save: 'Sacuvaj',
-                login: 'Prijavi se',
-                logout: 'Odjavi se',
-                register: 'Registruj se',
-                thisFieldIsRequired: 'Ovo polje je obavezno',
-                emailFormatError: 'Unesite tacan format email adrese',
-                reactApp: 'React app'
+                save: 'Sauvegarder',
+                login: 'Connexion',
+                logout: 'Déconnexion',
+                register: 'Inscription',
+                thisFieldIsRequired: 'Ce champ est requis',
+                emailFormatError: 'Format de l\'adresse e-mail invalide',
+                reactApp: 'React-Symfony'
             },
             editUser: {
-                title: 'Edit User',
+                title: 'Modifier l\'utilisateur',
             },
             addUser: {
-                title: 'Add User',
+                title: 'Ajouter un utilisateur',
             }
         },
         components: {
             FileUpload: {
-                upload: 'Otpremi',
-                files: 'Fajlovi',
-                dragDrop: 'Prevucite neke fajlove ovde ili kliknite da izaberete',
+                upload: 'Téléverser',
+                files: 'Fichiers',
+                dragDrop: 'Glissez des fichiers ici ou cliquez pour en sélectionner',
             },
             yesNoDialog: {
-                yes: 'Da',
-                no: 'Ne',
-                confirmDelete: 'Potvrdite brisanje',
-                confirmDeleteMessage: 'Da li ste sigurni da zelite obrisati ovo polje?',
+                yes: 'Oui',
+                no: 'Non',
+                confirmDelete: 'Confirmer la suppression',
+                confirmDeleteMessage: 'Êtes-vous sûr de vouloir supprimer ce champ ?',
             }
         },
         pages: {
             register: {
-                registration: 'Registracija',
-                alreadyHaveAccount: 'Vec imate nalog?'
+                registration: 'Inscription',
+                alreadyHaveAccount: 'Vous avez déjà un compte ?'
             },
             login: {
-                createNewAccount: 'Napravite novi nalog',
-                wrongUsernameOrPassword: 'Pogresno korisnicko ime ili sifra',
+                createNewAccount: 'Créer un nouveau compte',
+                wrongUsernameOrPassword: 'Nom d\'utilisateur ou mot de passe incorrect',
             },
             home: {
-                title: 'Glavna stranica',
-                welcome: 'Dobrodosli'
+                title: 'Page d\'accueil',
+                welcome: 'Bienvenue sur le site',
             },
             boardUser: {
-                title: 'Korisnikova tabla'
+                title: ''
             },
             boardModerator: {
-                title: 'Moderatova tabla'
+                title: 'Tableau du modérateur'
             },
             boardAdmin: {
-                title: 'Adminova tabla'
+                title: 'Tableau de l\'administrateur'
             },
         }
     }
