@@ -1,0 +1,37 @@
+.yes-no-dialog .MuiPaper-root {
+  width: 460px;
+  height: 270px;
+  border-radius: 20px;
+}
+.yes-no-dialog .MuiPaper-root .MuiTypography-h6 {
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  padding: 0;
+  margin-top: 45px;
+}
+.yes-no-dialog .MuiPaper-root .MuiDialogContent-root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.yes-no-dialog .MuiPaper-root .MuiDialogContent-root .MuiDialogContentText-root {
+  font-size: 16px;
+  font-weight: 400;
+  font-size: 16px;
+}
+.yes-no-dialog .MuiPaper-root .MuiDialogActions-root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+  padding-left: 45px;
+  padding-right: 45px;
+  margin-bottom: 36px;
+}
+.yes-no-dialog .MuiPaper-root .MuiDialogActions-root .MuiButton-root {
+  width: 160px;
+  height: 50px;
+}/*# sourceMappingURL=yes-no-dialog.css.map */
