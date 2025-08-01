@@ -14,7 +14,7 @@ class CommandesFixtures extends Fixture
 
         $faker = Factory::create();
 
-        for ($i = 0; $i < 250; $i++) {
+        for ($i = 0; $i < 550; $i++) {
             $commande = new Commandes();
             $commande->setDate($faker->dateTimeBetween('-1 year', 'now'));
             $commande->setIdProduit($faker->numberBetween(1, 100));

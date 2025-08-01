@@ -12,7 +12,7 @@ class TiragelistFixtures extends Fixture
     public function load(ObjectManager $manager): void
     {
         $faker =  Factory::create();
-        for ($i = 0; $i < 100; $i++) {
+        for ($i = 0; $i < 600; $i++) {
             $tiragelist = new Tiragelist();
             $tiragelist->setIdTop($faker->numberBetween(1, 100));
             $tiragelist->setUuidVainkeur($faker->uuid);
@@ -22,6 +22,7 @@ class TiragelistFixtures extends Fixture
             $tiragelist->setDate($faker->dateTimeBetween('-1 year', 'now'));
             $tiragelist->setStatus($faker->randomElement(['pending', 'sent', 'failed']));
             $tiragelist->setIsNew($faker->numberBetween(0, 1));
+            $manager->persist($tiragelist);
         }
 
         $manager->flush();

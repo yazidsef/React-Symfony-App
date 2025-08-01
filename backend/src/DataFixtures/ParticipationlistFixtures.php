@@ -13,13 +13,13 @@ class ParticipationlistFixtures extends Fixture
     {
         $faker = Factory::create();
 
-        for ($i = 0; $i < 100; $i++) {
+        for ($i = 0; $i < 600; $i++) {
             $participationlist = new Participationlist();
             $participationlist->setEmailP($faker->email);
-            $participationlist->setPhoneP($faker->phoneNumber);
             $participationlist->setChanceP($faker->numberBetween(0, 100));
             $participationlist->setTriggerChance($faker->randomElement(['yes', 'no', null]));
             $participationlist->setDate($faker->dateTimeBetween('-1 year', 'now'));
+            $manager->persist($participationlist);
         }
         $manager->flush();
     }

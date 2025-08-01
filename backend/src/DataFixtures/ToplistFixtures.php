@@ -13,16 +13,18 @@ class ToplistFixtures extends Fixture
     {
         $faker = Factory::create();
 
-        for ($i = 0; $i < 100; $i++) {
+        for ($i = 0; $i < 650; $i++) {
             $toplist = new Toplist();
             $toplist->setIdTopRank($faker->numberBetween(1, 100));
             $toplist->setDateRank($faker->dateTimeBetween('-1 year', 'now'));
-            $toplist->setRanking($faker->word);
+            $toplist->setRanking($faker->sentence(3));
             $toplist->setIdResumeRank($faker->numberBetween(1, 100));
             $toplist->setNbVotes($faker->numberBetween(1, 100));
             $toplist->setTimelineMain($faker->numberBetween(1, 100));
-            $toplist->setBanner($faker->imageUrl());
+            $toplist->setBanner($faker->lexify('banner-??????.jpg'));
+            $manager->persist($toplist);
         }
+        $manager->flush();
 
         $manager->flush();
     }
