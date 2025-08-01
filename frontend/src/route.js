@@ -5,6 +5,7 @@ import Profile from "../src//Pages/Profile/Profile";
 import BoardUser from "../src/Pages/Boards/BoardUser";
 import BoardModerator from "../src/Pages/Boards/BoardModerator";
 import BoardAdmin from "../src/Pages/Boards/BoardAdmin";
+import Commandes from "../src/Pages/Commandes/ListeCommandes";
 
 import { Route, Routes, matchPath } from "react-router-dom";
 import { Role } from "./Constants/Role";
@@ -53,6 +54,11 @@ export let ROUTES = {
     path: "/board-admin",
     component: <BoardAdmin />,
     roles: [Role.ADMIN]
+  },
+
+  Commandes: {
+    path: "/commandes",
+    component: <Commandes />
   }
 };
 

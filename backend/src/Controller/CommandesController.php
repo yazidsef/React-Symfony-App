@@ -49,9 +49,9 @@ class CommandesController extends AbstractController
 
     //endpoint pour ajouter une commande
     #[Route('/sf/new-commande', name: 'add_commande', methods: ['POST'])]
-    public function addCommande(Request $request, EntityManagerInterface $em): JswonResponse
+    public function addCommande(Request $request, EntityManagerInterface $em): JsonResponse
     {
-
+        
         $data = json_decode($request->getContent(),true);
         if(!$data){
             return new JsonResponse(['success'=>false]);
@@ -81,7 +81,7 @@ class CommandesController extends AbstractController
 
     //endpoint pour modifier une commande
     #[Route('/sf/edit-commande/{id}', name: 'edit_commande', methods: ['PUT'])]
-    public function editCommande(Request $request, EntityManagerInterface $em, int $id): JswonResponse
+    public function editCommande(Request $request, EntityManagerInterface $em, int $id): JsonResponse
     {
         
 
@@ -93,8 +93,7 @@ class CommandesController extends AbstractController
         if(!$commande){
             return new JsonResponse(['success'=>false]);
         }
-        
-        $commande = new Commandes();
+
         $commande->setDate(new \DateTime());
         $commande->setIdProduit($data['id_produit']);
         $commande->setStatus($data['status']);
@@ -107,6 +106,24 @@ class CommandesController extends AbstractController
         $commande->setUuidVainkeur($data['uuid_vainkeur']);
         $em->flush();
 
+        return new JsonResponse([
+            'success'=> true,
+            'id'=>$commande->getId()            
+        ]);
+    }
+
+    //endpoint pour supprimer une commande
+    #[Route('/sf/delete-commande/{id}', name: 'delete_commande', methods: ['DELETE'])]
+    public function deleteCommande(Request $request, EntityManagerInterface $em, int $id): JsonResponse
+    {
+        $commande = $em->getRepository(Commandes::class)->find($id);
+        if(!$commande){
+            return new JsonResponse(['success'=>false,'error'=>'Commande not found']);
+        }
+
+        $em->remove($commande);
+        $em->flush();
+        
         return new JsonResponse([
             'success'=> true,
             'id'=>$commande->getId()            
