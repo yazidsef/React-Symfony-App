@@ -17,10 +17,12 @@ class Commandes
     #[ORM\Column(type: Types::DATE_MUTABLE)]
     private ?\DateTimeInterface $date = null;
 
-    #[ORM\Column]
+
+
+    #[ORM\Column(nullable: true)]
     private ?int $id_produit = null;
 
-    #[ORM\Column]
+    #[ORM\Column(nullable: true)]
     private ?int $id_vainkeurz = null;
 
     #[ORM\Column]
@@ -158,6 +160,17 @@ class Commandes
     {
         $this->isNew = $isNew;
 
+        return $this;
+    }
+
+    public function getIdProduit(): ?int
+    {
+        return $this->id_produit;
+    }
+
+    public function setIdProduit(?int $id_produit): static
+    {
+        $this->id_produit = $id_produit;
         return $this;
     }
 }
