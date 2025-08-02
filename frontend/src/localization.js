@@ -87,6 +87,93 @@ let strings = new LocalizedStrings({
                 title: 'Tableau de l\'administrateur'
             },
         }
+    },
+    en: {
+        base: {
+            profile: {
+                name: 'Name',
+                surname: 'Surname',
+                email: 'E-Mail',
+                username: 'Username',
+                password: 'Password',
+                role: 'Role',
+                userType: 'User type',
+            },
+            table: {
+                actions: 'Actions',
+                edit: 'Edit',
+                delete: 'Delete',
+            },
+            filter: {
+                sort: {
+                    sortType: 'Sort type',
+                    datetimeDesc: 'From the most recent to the oldest',
+                    datetimeAsc: 'From the oldest to the most recent',
+                }
+            },
+            role: {
+                user: 'User',
+                moderator: 'Moderator',
+                admin: 'Administrator'
+            },
+            userType: {
+                individual: 'Individual',
+                company: 'Company',
+            }
+        },
+        forms: {
+            common: {
+                save: 'Save',
+                login: 'Login',
+                logout: 'Logout',
+                register: 'Register',
+                thisFieldIsRequired: 'This field is required',
+                emailFormatError: 'Invalid email address format',
+                reactApp: 'React-Symfony'
+            },
+            editUser: {
+                title: 'Edit user',
+            },
+            addUser: {
+                title: 'Add user',
+            }
+        },
+        components: {
+            FileUpload: {
+                upload: 'Téléverser',
+                files: 'Fichiers',
+                dragDrop: 'Glissez des fichiers ici ou cliquez pour en sélectionner',
+            },
+            yesNoDialog: {
+                yes: 'Yes',
+                no: 'No',
+                confirmDelete: 'Confirm deletion',
+                confirmDeleteMessage: 'Are you sure you want to delete this field?',
+            }
+        },
+        pages: {
+            register: {
+                registration: 'Registration',
+                alreadyHaveAccount: 'Already have an account?'
+            },
+            login: {
+                createNewAccount: 'Create a new account',
+                wrongUsernameOrPassword: 'Incorrect username or password',
+            },
+            home: {
+                title: 'Homepage',
+                welcome: 'Welcome to the site',
+            },
+            boardUser: {
+                title: 'User Dashboard'
+            },
+            boardModerator: {
+                title: 'Moderator Dashboard'
+            },
+            boardAdmin: {
+                title: 'Administrator Dashboard'
+            },
+        }
     }
 });
 
